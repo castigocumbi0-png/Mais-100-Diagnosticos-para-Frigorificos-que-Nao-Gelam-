@@ -1,0 +1,6 @@
+{
+  "name": "+100 Diagnósticos para Frigoríficos que Não Gelam",
+  "description": "Tenha +100 diagnósticos para consultar quando um frigorífico não gela e transforme aquela dúvida inicial em um caminho de investigação mais organizado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
