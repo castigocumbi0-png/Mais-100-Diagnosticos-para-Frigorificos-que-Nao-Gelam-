@@ -123,8 +123,9 @@ export const Pricing: React.FC = () => {
                 <img
                   src={completePlan.image}
                   alt={completePlan.name}
-                  className="h-44 w-auto object-contain rounded-xl border border-[#CBDDE4] p-1"
+                  className="h-48 sm:h-52 w-auto object-contain rounded-xl border border-[#CBDDE4] p-1 transition-transform duration-300 hover:scale-105"
                   loading="lazy"
+                  referrerPolicy="no-referrer"
                 />
               </div>
 
