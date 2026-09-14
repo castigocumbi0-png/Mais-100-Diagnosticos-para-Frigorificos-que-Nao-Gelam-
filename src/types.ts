@@ -47,7 +47,7 @@ export interface PlanItem {
   name: string;
   badge?: string;
   isFeatured: boolean;
-  image: string;
+  image?: string;
   subtitle: string;
   features: string[];
   originalPrice?: string;

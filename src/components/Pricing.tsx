@@ -119,15 +119,20 @@ export const Pricing: React.FC = () => {
                 {completePlan.subtitle}
               </p>
 
-              <div className="my-4 flex justify-center">
-                <img
-                  src={completePlan.image}
-                  alt={completePlan.name}
-                  className="h-48 sm:h-52 w-auto object-contain rounded-xl border border-[#CBDDE4] p-1 transition-transform duration-300 hover:scale-105"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+              {completePlan.image && (
+                <div className="my-4 flex justify-center">
+                  <img
+                    src={completePlan.image}
+                    alt={completePlan.name}
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = 'https://i.ibb.co/j9B27y7Z/capa.png';
+                    }}
+                    className="h-48 sm:h-52 w-auto object-contain rounded-xl border border-[#CBDDE4] p-1 transition-transform duration-300 hover:scale-105"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              )}
 
               <div className="p-4 rounded-xl bg-[#E0EDF2]/60 border border-[#CBDDE4] mb-4 text-xs sm:text-sm text-[#263238] space-y-2">
                 <p className="leading-relaxed">

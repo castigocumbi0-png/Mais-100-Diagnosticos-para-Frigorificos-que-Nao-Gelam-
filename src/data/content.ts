@@ -107,7 +107,7 @@ export const plansList: PlanItem[] = [
     badge: 'MAIS COMPLETO',
     subtitle: '+100 Diagnósticos para Frigoríficos que Não Gelam + 3 Bônus',
     isFeatured: true,
-    image: '/src/assets/images/capa.png',
+    image: '/images/plano-completo.png',
     features: [
       'Tenha o produto principal mais os 3 materiais complementares criados para ajudar você a organizar ainda melhor seu diagnóstico.',
       '✓ +100 Diagnósticos para Frigoríficos que Não Gelam',
