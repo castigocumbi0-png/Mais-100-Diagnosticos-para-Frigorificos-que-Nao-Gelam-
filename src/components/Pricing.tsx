@@ -1,5 +1,6 @@
 import React from 'react';
 import { plansList } from '../data/content';
+import { trackPixelEvent } from '../utils/pixel';
 
 export const Pricing: React.FC = () => {
   const [basicPlan, completePlan] = plansList;
@@ -91,6 +92,13 @@ export const Pricing: React.FC = () => {
                 href={basicPlan.checkoutUrl}
                 target={basicPlan.checkoutUrl.startsWith('http') ? '_blank' : undefined}
                 rel={basicPlan.checkoutUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+                onClick={() => {
+                  trackPixelEvent('InitiateCheckout', {
+                    content_name: 'Plano Básico - +100 Diagnósticos para Frigoríficos que Não Gelam',
+                    value: 17.9,
+                    currency: 'BRL',
+                  });
+                }}
                 className="px-8 py-3.5 text-base sm:text-lg w-full inline-block text-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] font-bold rounded-full tracking-tight uppercase shadow-lg text-white"
                 style={{ background: '#123B4A' }}
               >
@@ -175,6 +183,13 @@ export const Pricing: React.FC = () => {
                 href={completePlan.checkoutUrl}
                 target={completePlan.checkoutUrl.startsWith('http') ? '_blank' : undefined}
                 rel={completePlan.checkoutUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+                onClick={() => {
+                  trackPixelEvent('InitiateCheckout', {
+                    content_name: 'Plano Completo - +100 Diagnósticos para Frigoríficos que Não Gelam + 3 Bônus',
+                    value: 27.9,
+                    currency: 'BRL',
+                  });
+                }}
                 className="px-8 py-4 text-base sm:text-lg w-full inline-block text-center transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] pv-pulse font-bold rounded-full tracking-tight uppercase shadow-xl text-white"
                 style={{
                   background: '#16A34A',
